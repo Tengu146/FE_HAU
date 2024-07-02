@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shopping-cart</title>
+    <link rel="stylesheet" href="css.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/reponsive.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="img-nav">
+                <a>WEB BÁN LAPTOP</a>
+            </div>
+            <div class="content-nav">
+                <ul>
+                    <li><a href="webbanhang.html">Trang Chủ</a></li>
+                   <li><a href="gioithieu.html">Giới Thiệu</a></li>
+                    <li><a href="dangky.html">Đăng ký/ Đăng nhập </a></li>
+                    
+                </ul>
+            </div>
+            <button id="cart">
+                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                Giỏ Hàng
+            </button>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Giỏ Hàng</h5>
+                        <span class="close">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="cart-row">
+                            <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                            <span class="cart-price cart-header cart-column">Giá</span>
+                            <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                        </div>
+                        <div class="cart-items">
+                        </div>
+                        <div class="cart-total">
+                            <strong class="cart-total-title">Tổng Cộng:</strong>
+                            <span class="cart-total-price">0VNĐ</span>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+                        <button type="button" class="btn btn-primary order">Thanh Toán</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <section class="wrapper">
+        <div class="products">
+            <ul>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd"src="mt1.jpg" alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Lenovo Ideapad Slim 3 15IAH8 i5 12450H (83ER000EVN)</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">13890000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product">
+                  <div class="img-product">
+                      <img class="img-prd"src="mt2.jpg" alt="">
+                  </div>
+                  <div class="content-product">
+                      <h3 class="content-product-h3">Asus Vivobook Go 15 E1504FA R5 7520U (NJ776W)</h3>
+                      <div class="content-product-deltals">
+                          <div class="price">
+                              <span class="money">12490000đ</span>
+                          </div>
+                          <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                      </div>
+                  </div>
+              </li>
+              <li class="main-product">
+                <div class="img-product">
+                    <img class="img-prd"src="mt3.png" alt="">
+                </div>
+                <div class="content-product">
+                    <h3 class="content-product-h3">HP 15s fq5229TU i3 1215U (8U237PA)</h3>
+                    <div class="content-product-deltals">
+                        <div class="price">
+                            <span class="money">10890000đ</span>
+                        </div>
+                        <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+            </li>
+            <li class="main-product">
+              <div class="img-product">
+                  <img class="img-prd"src="mt4.jpg" alt="">
+              </div>
+              <div class="content-product">
+                  <h3 class="content-product-h3">Lenovo LOQ Gaming 15IAX9 i5 12450HX (83GS000JVN)</h3>
+                  <div class="content-product-deltals">
+                      <div class="price">
+                          <span class="money">20390000đ</span>
+                      </div>
+                      <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                  </div>
+              </div>
+          </li>
+          <li class="main-product">
+            <div class="img-product">
+                <img class="img-prd"src="mt5.jpg" alt="">
+            </div>
+            <div class="content-product">
+                <h3 class="content-product-h3">MacBook Air 13 inch M1</h3>
+                <div class="content-product-deltals">
+                    <div class="price">
+                        <span class="money">18890000đ</span>
+                    </div>
+                    <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                </div>
+            </div>
+        </li>
+        <li class="main-product">
+          <div class="img-product">
+              <img class="img-prd"src="mt6.jpg" alt="">
+          </div>
+          <div class="content-product">
+              <h3 class="content-product-h3">Dell Inspiron 15 3520 i5 1235U (25P231)</h3>
+              <div class="content-product-deltals">
+                  <div class="price">
+                      <span class="money">13890000đ</span>
+                  </div>
+                  <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+              </div>
+          </div>
+      </li>
+      <li class="main-product">
+        <div class="img-product">
+            <img class="img-prd"src="mt7.jpg" alt="">
+        </div>
+        <div class="content-product">
+            <h3 class="content-product-h3">Acer Aspire 3 A315 510P 32EF i3 N305 (NX.KDHSV.001)</h3>
+            <div class="content-product-deltals">
+                <div class="price">
+                    <span class="money">13890000đ</span>
+                </div>
+                <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+            </div>
+        </div>
+    </li>
+    <li class="main-product">
+      <div class="img-product">
+          <img class="img-prd"src="mt8.jpg" alt="">
+      </div>
+      <div class="content-product">
+          <h3 class="content-product-h3">HP Pavilion 15 eg2081TU i5 1240P (7C0Q4PA)</h3>
+          <div class="content-product-deltals">
+              <div class="price">
+                  <span class="money">7890000đ</span>
+              </div>
+              <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+          </div>
+      </div>
+  </li>
+  <li class="main-product">
+    <div class="img-product">
+        <img class="img-prd"src="mt9.jpg" alt="">
+    </div>
+    <div class="content-product">
+        <h3 class="content-product-h3">Acer Aspire Lite 15 51M 55NB i5 1155G7 (NX.KRSSV.001)</h3>
+        <div class="content-product-deltals">
+            <div class="price">
+                <span class="money">16690000đ</span>
+            </div>
+            <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+        </div>
+    </div>
+</li>
+<li class="main-product">
+  <div class="img-product">
+      <img class="img-prd"src="mt10.jpg" alt="">
+  </div>
+  <div class="content-product">
+      <h3 class="content-product-h3">Asus Vivobook 15 X1504ZA i3 1215U (NJ102W)</h3>
+      <div class="content-product-deltals">
+          <div class="price">
+              <span class="money">15790000đ</span>
+          </div>
+          <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+      </div>
+  </div>
+</li>
+<li class="main-product">
+  <div class="img-product">
+      <img class="img-prd"src="mt11.jpg" alt="">
+  </div>
+  <div class="content-product">
+      <h3 class="content-product-h3">Asus Vivobook 15 OLED A1505ZA i5 12500H (L1337W)</h3>
+      <div class="content-product-deltals">
+          <div class="price">
+              <span class="money">13890000đ</span>
+          </div>
+          <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+      </div>
+  </div>
+</li>
+<li class="main-product">
+  <div class="img-product">
+      <img class="img-prd"src="mt12.jpg" alt="">
+  </div>
+  <div class="content-product">
+      <h3 class="content-product-h3">Acer Gaming Aspire 5 A515 58GM 51LB i5 13420H</h3>
+      <div class="content-product-deltals">
+          <div class="price">
+              <span class="money">19890000đ</span>
+          </div>
+          <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+      </div>
+  </div>
+</li>
+<li class="main-product">
+  <div class="img-product">
+      <img class="img-prd"src="mt13.jpg" alt="">
+  </div>
+  <div class="content-product">
+      <h3 class="content-product-h3">Asus Vivobook X1404ZA i5 1235U (NK376W)</h3>
+      <div class="content-product-deltals">
+          <div class="price">
+              <span class="money">12890000đ</span>
+          </div>
+          <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+      </div>
+  </div>
+</li>
+<li class="main-product">
+  <div class="img-product">
+      <img class="img-prd"src="mt14.jpg" alt="">
+  </div>
+  <div class="content-product">
+      <h3 class="content-product-h3">Lenovo Ideapad 1 15ALC7 R7 5700U (82R400C1VN)</h3>
+      <div class="content-product-deltals">
+          <div class="price">
+              <span class="money">23890000đ</span>
+          </div>
+          <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+      </div>
+  </div>
+</li>
+<li class="main-product">
+  <div class="img-product">
+      <img class="img-prd"src="mt15.jpg" alt="">
+  </div>
+  <div class="content-product">
+      <h3 class="content-product-h3">HP 240 G9 i3 1215U (6L1X7PA)</h3>
+      <div class="content-product-deltals">
+          <div class="price">
+              <span class="money">9890000đ</span>
+          </div>
+          <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+      </div>
+  </div>
+</li>
+<li class="main-product">
+  <div class="img-product">
+      <img class="img-prd"src="mt16.jpg" alt="">
+  </div>
+  <div class="content-product">
+      <h3 class="content-product-h3">Asus Vivobook X1404ZA i3 1215U (NK246W)</h3>
+      <div class="content-product-deltals">
+          <div class="price">
+              <span class="money">7890000đ</span>
+          </div>
+          <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+      </div>
+  </div>
+</li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+    </footer>
+    <script>
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("cart");
+var close = document.getElementsByClassName("close")[0];
+var close_footer = document.getElementsByClassName("close-footer")[0];
+var order = document.getElementsByClassName("order")[0];
+btn.onclick = function () {
+  modal.style.display = "block";
+}
+close.onclick = function () {
+  modal.style.display = "none";
+}
+close_footer.onclick = function () {
+  modal.style.display = "none";
+}
+order.onclick = function () {
+  alert("Cảm ơn bạn đã thanh toán đơn hàng")
+}
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+function updatecart() {
+  var cart_item = document.getElementsByClassName("cart-items")[0];
+  var cart_rows = cart_item.getElementsByClassName("cart-row");
+  var total = 0;
+  for (var i = 0; i < cart_rows.length; i++) {
+    var cart_row = cart_rows[i]
+    var price_item = cart_row.getElementsByClassName("cart-price ")[0]
+    var quantity_item = cart_row.getElementsByClassName("cart-quantity-input")[0]
+    var price = parseFloat(price_item.innerText)
+    var quantity = quantity_item.value 
+    total = total + (price * quantity)
+  }
+  document.getElementsByClassName("cart-total-price")[0].innerText = total + 'VNĐ'
+}
+
+var quantity_input = document.getElementsByClassName("cart-quantity-input");
+for (var i = 0; i < quantity_input.length; i++) {
+  var input = quantity_input[i];
+  input.addEventListener("change", function (event) {
+    var input = event.target
+    if (isNaN(input.value) || input.value <= 0) {
+      input.value = 1;
+    }
+    updatecart()
+  })
+}
+var add_cart = document.getElementsByClassName("btn-cart");
+for (var i = 0; i < add_cart.length; i++) {
+  var add = add_cart[i];
+  add.addEventListener("click", function (event) {
+
+    var button = event.target;
+    var product = button.parentElement.parentElement;
+    var img = product.parentElement.getElementsByClassName("img-prd")[0].src
+    var title = product.getElementsByClassName("content-product-h3")[0].innerText
+    var price = product.getElementsByClassName("price")[0].innerText
+    addItemToCart(title, price, img)
+
+    modal.style.display = "block";
+    
+    updatecart()
+  })
+}
+
+function addItemToCart(title, price, img) {
+  var cartRow = document.createElement('div')
+  cartRow.classList.add('cart-row')
+  var cartItems = document.getElementsByClassName('cart-items')[0]
+  var cart_title = cartItems.getElementsByClassName('cart-item-title')
+  for (var i = 0; i < cart_title.length; i++) {
+    if (cart_title[i].innerText == title) {
+      alert('Sản Phẩm Đã Có Trong Giỏ Hàng')
+      return
+    }
+  }
+
+  var cartRowContents = `
+  <div class="cart-item cart-column">
+      <img class="cart-item-image" src="${img}" width="100" height="100">
+      <span class="cart-item-title">${title}</span>
+  </div>
+  <span class="cart-price cart-column">${price}</span>
+  <div class="cart-quantity cart-column">
+      <input class="cart-quantity-input" type="number" value="1">
+      <button class="btn btn-danger" type="button">Xóa</button>
+  </div>`
+  cartRow.innerHTML = cartRowContents
+  cartItems.append(cartRow)
+  cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', function () {
+    var button_remove = event.target
+    button_remove.parentElement.parentElement.remove()
+    updatecart()
+  })
+  cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', function (event) {
+    var input = event.target
+    if (isNaN(input.value) || input.value <= 0) {
+      input.value = 1;
+    }
+    updatecart()
+  })
+}
+        </script>
+</body>
+</html>
